@@ -1,0 +1,81 @@
+@use "../utils/mixin" as mixin;
+@use "../utils/variable" as variable;
+
+
+@include mixin.animationBtn;
+
+#navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        .nav-list {
+            display: flex;
+
+            &-item {
+                transition: 0.3s;
+                position: relative;
+
+                .dropdown {
+                    width: 100%;
+                    height: 350px;
+                    transition: 0.3s;
+                    list-style: none;
+                    padding: 24px 150px 0px 30px;
+                    visibility: hidden;
+                    position: absolute;
+                    border-radius: 10px;
+                    top: calc(100% + 20px);
+                    background: variable.$whiteColor;
+                    z-index: 5;
+
+                    li {
+                        margin: 10px 0;
+                        
+                        a {
+                            color: black;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                }
+
+                &:hover .dropdown {
+                    visibility: visible !important;
+                    top: 100%;
+                    transition: 0.3s;
+                }
+
+                list-style: none;
+
+                .home {
+                    color: variable.$pinkColor;
+                }
+
+                a {
+                    color: variable.$whiteColor;
+                    text-decoration: none;
+                    padding: 0 30px;
+                    font-size: 17px;
+
+                    &:hover {
+                        color: variable.$pinkColor;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@use "../utils/variable" as variable;
+
+#speakers {
+    background-color: #754dbd;
+    padding: 15px 0 70px;
+
+    .container {
+
+        .about {
+            margin-top: 5%;
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                line-height: 1.8;
+
+                p {
+                    color: variable.$whiteColor;
+                    letter-spacing: 1px;
+                }
+
+                h2 {
+                    color: variable.$whiteColor;
+                    letter-spacing: 1px;
+                    font-size: 38px;
+                }
+            }
+
+            .people-images {
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-evenly;
+
+                .people-about {
+                    position: relative;
+                    width: 22%;
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    &:hover .sosial-media {
+                        top: 0px;
+                        transition: 800ms;
+                    }
+
+                    .sosial-media {
+                        transition: 800ms;
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        top: -150px;
+                        height: 150px;
+                        right: 0;
+                        background-color: variable.$pinkColor;
+                        border-bottom-left-radius: 10px;
+
+                        i {
+                            padding: 10px 15px;
+                            color: variable.$whiteColor;
+                            font-weight: 700;
+                            transition: 0.5s;
+
+                            &:hover {
+                                color: variable.$blueColor;
+                                transition: 0.5s;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        border-radius: 10px;
+                    }
+
+                    h4 {
+                        color: variable.$whiteColor;
+                        font-size: 23px;
+                        position: absolute;
+                        top: 75%;
+                        left: 5%;
+                    }
+
+                    p {
+                        color: variable.$pinkColor;
+                        font-size: 20px;
+                        position: absolute;
+                        top: 85%;
+                        left: 5%;
+                    }
+                }
+            }
+
+            .btn {
+                margin-top: 3%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .speakerbtn {
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                    border: 2px solid variable.$whiteColor;
+                    background-color: transparent;
+                    color: variable.$whiteColor;
+                    transition: 0.7s;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: variable.$pinkColor;
+                        border: 2px solid variable.$pinkColor;
+                    }
+                }
+            }
+        }
+    }
+}

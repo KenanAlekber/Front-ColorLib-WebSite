@@ -1,0 +1,102 @@
+@use "../utils/variable" as variable;
+
+#about {
+    margin-top: 8%;
+    margin-bottom: 5%;
+
+    .container {
+
+        .about {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            &-text {
+                width: 33%;
+
+                p {
+                    font-size: 14px;
+                    color: variable.$pinkColor;
+                    letter-spacing: 1px;
+                    border-bottom: 2px solid #4b4d7b;
+                    margin-bottom: 20px;
+                    padding-bottom: 15px;
+                    display: inline-block;
+                    line-height: 1px;
+                }
+
+                h1,
+                h2 {
+                    font-size: 40px;
+                    color: variable.$whiteColor;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                    width: 110%;
+                }
+
+                span {
+                    line-height: 1.8;
+                    font-size: 17px;
+                    font-weight: 400;
+                    color: variable.$whiteColor;
+                }
+            }
+        }
+
+        button {
+            margin-left: 8%;
+        }
+
+        .time {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 8%;
+
+            &-text {
+                margin-left: 4%;
+
+                p {
+                    font-size: 14px;
+                    color: variable.$pinkColor;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                    letter-spacing: 1px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    color: variable.$whiteColor;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+
+            }
+
+            .countdown {
+                display: flex;
+                margin-right: 17%;
+
+                .clock {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: 8%;
+                    border: 3px solid #383a6d;
+                    padding: 15px 20px;
+
+                    h3 {
+                        color: #f5deb3;
+                        font-size: 80px;
+                    }
+
+                    p {
+                        color: #5b5e8d;
+                    }
+                }
+            }
+        }
+    }
+}

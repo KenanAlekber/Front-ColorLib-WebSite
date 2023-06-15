@@ -1,0 +1,102 @@
+@use "../utils/mixin" as mixin;
+@use "../utils/variable" as variable;
+
+#contact {
+    padding: 70px 0;
+
+    .container {
+        padding: 0 100px;
+
+        .header {
+            text-align: center;
+            line-height: 1.5;
+
+            p {
+                color: variable.$pinkColor;
+                font-size: 16px;
+            }
+
+            h3 {
+                font-size: 38px;
+                color: variable.$whiteColor;
+            }
+        }
+
+        .form {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 50px 0;
+
+            .form-about {
+                text-align: start;
+
+                .text {
+                    line-height: 1.5;
+                    padding-bottom: 35px;
+
+                    p {
+                        color: variable.$greyColor;
+                        font-size: 16px;
+                    }
+
+                    h4 {
+                        color: variable.$whiteColor;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            form {
+                background-color: #21245c;
+                border-radius: 10px;
+                padding: 15px 50px;
+                width: 60%;
+
+                .input {
+                    padding: 0 0px 30px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .inpt {
+                        input {
+                            padding: 15px 165px 10px 0;
+                            background-color: transparent;
+                            border: none;
+                            border-bottom: 1px solid variable.$whiteColor;
+                            color: variable.$whiteColor;
+                            transition: 0.5s;
+
+                            &:hover {
+                                border-bottom: 1px solid variable.$greyColor;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                .message {
+                    padding: 10px 0 25px;
+
+                    textarea {
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid variable.$whiteColor;
+                        color: variable.$whiteColor;
+                        transition: 0.5s;
+
+                        &:hover {
+                            border-bottom: 1px solid variable.$greyColor;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+
+                .sendbtn {
+                    margin-top: 1%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@use "../utils/variable" as variable;
+
+#plan {
+    margin-top: 7%;
+
+    .container {
+
+        .timetable {
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: variable.$pinkColor;
+                }
+
+                h3 {
+                    font-size: 38px;
+                    color: variable.$whiteColor;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .date {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3%;
+                cursor: pointer;
+
+                .day {
+                    line-height: 30px;
+                    background-color: #1f2371;
+                    text-align: center;
+                    padding: 20px 30px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: variable.$greyColor;
+                        transition: 0.5s;
+                    }
+
+                    h4 {
+                        color: variable.$whiteColor;
+                    }
+
+                    p {
+                        color: variable.$whiteColor;
+                    }
+                }
+
+                .left {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+
+                .border {
+                    border-right: 1px solid variable.$greyColor;
+                    border-left: 1px solid variable.$greyColor;
+                }
+
+                .right {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+
+            .tables {
+                margin-top: 5%;
+
+                .table {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border: 1px solid variable.$greyColor;
+                    border-radius: 10px;
+                    margin: 2% 15%;
+                    padding: 10px;
+                    transition: 0.5s;
+
+                    .about {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        width: 43%;
+
+                        img {
+                            width: 25%;
+                            border-radius: 50%;
+                        }
+
+                        .name {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 5%;
+                            line-height: 35px;
+
+                            h3 {
+                                font-size: 20px;
+                                color: variable.$whiteColor;
+                            }
+
+                            p {
+                                font-size: 18px;
+                                color: variable.$greyColor;
+                            }
+                        }
+                    }
+
+                    .country {
+                        line-height: 35px;
+                        width: 30%;
+
+                        p {
+                            color: variable.$whiteColor;
+
+                            i {
+                                color: variable.$pinkColor;
+                                margin-right: 2%;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border: 1px solid variable.$pinkColor;
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 3% 0 6%;
+
+                button {
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                    color: variable.$whiteColor;
+                    background-color: transparent;
+                    border: 3px solid variable.$blueColor;
+                    transition: 0.7s;
+
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: variable.$blueColor ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.d-none {
+    display: none;
+}

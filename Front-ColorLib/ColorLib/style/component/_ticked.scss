@@ -1,0 +1,101 @@
+@use "../utils/variable" as variable;
+
+#ticked {
+    background-color: #7352c2;
+
+    .container {
+
+        .header {
+            text-align: center;
+
+            p {
+                padding: 70px 0 5px;
+                color: variable.$whiteColor;
+            }
+
+            h3 {
+                font-size: 38px;
+                color: variable.$whiteColor;
+                padding-bottom: 70px;
+            }
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0 40px;
+            margin-bottom: 5%;
+            padding-bottom: 70px;
+
+            .card {
+                background-color: variable.$whiteColor;
+                border-radius: 10px;
+                padding: 50px;
+                transition: 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                .head {
+                    text-align: center;
+                    padding: 20px 0;
+                    position: relative;
+
+                    .pass {
+                        p {
+                            position: absolute;
+                            bottom: 105.5%;
+                            left: 25%;
+                            background-color: variable.$pinkColor;
+                            padding: 10px 30px;
+                            border-bottom-left-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            color: variable.$whiteColor;
+                        }
+                    }
+                }
+
+                .price {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    p {
+                        font-size: 30px;
+                        color: variable.$darkBlueColor;
+                        font-weight: 700;
+                        margin-top: 5%;
+                    }
+
+                    h1 {
+                        font-size: 60px;
+                        color: variable.$darkBlueColor;
+                    }
+                }
+
+                .btn {
+                    margin-bottom: 15%;
+
+                    button {
+                        padding: 15px 90px;
+                    }
+                }
+
+                .text {
+                    text-align: center;
+
+                    p {
+                        color: #5d5e8d;
+                        line-height: 2;
+
+                        i {
+                            color: #e666b1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

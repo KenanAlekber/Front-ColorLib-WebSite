@@ -1,0 +1,131 @@
+@use "../utils/variable" as variable;
+
+#blog {
+    background-color: #9556c7;
+
+    .container {
+        padding: 70px 100px;
+
+        .header {
+            text-align: center;
+            line-height: 1.8;
+
+            p {
+                color: variable.$whiteColor;
+                font-size: 18px;
+            }
+
+            h3 {
+                color: variable.$whiteColor;
+                font-size: 38px;
+            }
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+
+            .card {
+                background-color: variable.$whiteColor;
+                width: 30%;
+                border-radius: 15px;
+
+                &:hover {
+                    transition: 0.5s;
+
+                    img {
+                        transform: scale(1.1);
+                        transition: 0.5s;
+                    }
+                }
+
+                .image {
+                    overflow: hidden;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        transition: 0.5s;
+                    }
+                }
+
+                .date-about {
+                    text-align: center;
+                    padding: 30px 0 10px;
+
+                    h3 {
+                        font-size: 20px;
+                        transition: 0.7s;
+
+                        &:hover {
+                            color: variable.$pinkColor;
+                            transform-origin: 0.7s;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .icon-text {
+                        padding: 20px 0;
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        p {
+                            color: grey;
+                            font-size: 15px;
+                            transition: 0.5s;
+                            padding: 0 0 0 10px;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: variable.$pinkColor;
+                                transition: 0.5s;
+                            }
+
+                            i {
+                                font-size: 13px;
+                                padding-right: 8px;
+                            }
+                        }
+                    }
+
+                }
+
+                .text {
+                    padding: 0 40px 15px;
+
+                    p {
+                        color: variable.$greyColor;
+                        text-align: center;
+                        line-height: 1.8;
+                        margin-bottom: 10%;
+                    }
+                }
+
+                .card-icon {
+                    text-align: center;
+                    position: relative;
+
+                    button {
+                        position: absolute;
+                        top: -33px;
+                        right: 42%;
+                        padding: 20px 22px;
+                        border: 3px solid variable.$whiteColor;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+
+                        i {
+                            color: variable.$whiteColor;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

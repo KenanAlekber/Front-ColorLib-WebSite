@@ -1,0 +1,21 @@
+@import "./component/navbar";
+@import "./component/hero";
+@import "./component/about";
+@import "./component/speakers";
+@import "./component/plan";
+@import "./component/ticked";
+@import "./component/sponsor";
+@import "./component/blog";
+@import "./component/contact";
+@import "./component/footer";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151853;
+    font-family: sans-serif;
+}

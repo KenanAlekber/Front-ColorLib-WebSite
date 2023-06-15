@@ -1,0 +1,51 @@
+@mixin animationBtn {
+    .animationBtn {
+        z-index: 1;
+        text-decoration: none;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+        transition-duration: 800ms;
+        cursor: pointer;
+
+        &:hover::before {
+            left: 110% !important;
+        }
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    .animationBtn::before {
+        transition-duration: 800ms;
+        position: absolute;
+        width: 120%;
+        color: white;
+        height: 120%;
+        z-index: -2;
+        top: -10%;
+        left: -10%;
+        right: 0;
+        content: '';
+        background: #df42b1;
+        background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+    }
+}
+
+@mixin inputAndHover {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid variable.$whiteColor;
+    color: variable.$greyColor;
+    transition: 0.5s;
+
+    &:hover {
+        border-bottom: 1px solid variable.$greyColor;
+        transition: 0.5s;
+    }
+}

@@ -1,0 +1,186 @@
+@use "../utils/variable" as variable;
+
+#footer {
+    background-color: variable.$darkBlueColor;
+
+    .container {
+        padding: 100px 200px 10px;
+
+        .footer {
+
+            &-about {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid variable.$greyColor;
+
+                .confer {
+
+                    &-text {
+                        p {
+                            color: variable.$purpleColor;
+                            padding-top: 20px;
+                            font-size: 15px;
+                            text-align: left;
+                            line-height: 1.8;
+                            width: 72%;
+                        }
+                    }
+
+                    &-icons {
+                        padding: 15px 0 50px;
+
+                        i {
+                            padding: 9px 11px;
+                            color: variable.$blueColor;
+                            border-radius: 50%;
+                            border: 1px solid variable.$greyColor;
+                            transition: 0.5s;
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: variable.$greyColor;
+                                color: variable.$whiteColor;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                .contact {
+                    margin-bottom: 75px;
+                    width: 45%;
+
+                    &-head {
+                        font-size: 20px;
+                        color: variable.$whiteColor;
+                        margin-bottom: 20px;
+                    }
+
+                    &-text {
+                        p {
+                            color: variable.$purpleColor;
+                            line-height: 2.5;
+                            font-size: 14px;
+
+                            i {
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .workshops {
+                    width: 63%;
+                    padding-bottom: 65px;
+                    padding-left: 30px;
+
+                    &-head {
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        color: variable.$whiteColor;
+                    }
+
+                    &-text {
+                        display: flex;
+                        flex-direction: column;
+                        width: 63%;
+
+                        a {
+                            text-decoration: none;
+                            color: variable.$purpleColor;
+                            line-height: 1.5;
+                            font-size: 15px;
+                            margin-bottom: 15px;
+                            transition: 0.5s;
+
+                            &:hover {
+                                color: variable.$whiteColor;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                .gallery {
+                    padding-bottom: 60px;
+
+                    &-head {
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                        color: variable.$whiteColor;
+                    }
+
+                    &-images {
+
+                        .img {
+                            display: flex;
+                            padding-bottom: 10px;
+                        }
+
+                        a {
+                            border-radius: 10px;
+                            padding: 0 5px;
+
+                            img {
+                                width: 71px;
+                                height: 65px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-policy {
+                padding-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+
+                .template {
+                    line-height: 1.8;
+
+                    p {
+                        color: variable.$purpleColor;
+                        font-size: 15px;
+                    }
+
+                    a {
+                        color: variable.$whiteColor;
+                        text-decoration: none;
+                        transition: 0.5s;
+
+                        &:hover {
+                            transition: 0.5s;
+                            color: variable.$pinkColor;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .privacy {
+                    width: 20%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            color: variable.$purpleColor;
+                            text-decoration: none;
+                            font-size: 15px;
+                            transition: 0.5s;
+
+                            &:hover {
+                                color: variable.$whiteColor;
+                                transition: 0.5s;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
